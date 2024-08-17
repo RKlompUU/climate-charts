@@ -1,2 +1,5 @@
 https://climate.nasa.gov/vital-signs/global-temperature/?intent=121:
 - graph.txt
+
+graph.txt:
+- graph.csv
