@@ -1,0 +1,11 @@
+https://tntcat.iiasa.ac.at/SspDb:
+- ssp-cmip6-201811/
+- ssp-iam-v2-201811/
+
+https://ipcc-browser.ipcc-data.org/browser/dataset/3737/0:
+- tas_global_Historical.csv
+- tas_global_SSP1_1_9.csv
+- tas_global_SSP1_2_6.csv
+- tas_global_SSP2_4_5.csv
+- tas_global_SSP3_7_0.csv
+- tas_global_SSP5_8_5.csv
