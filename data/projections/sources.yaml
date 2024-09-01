@@ -1,6 +1,7 @@
 https://tntcat.iiasa.ac.at/SspDb:
 - ssp-cmip6-201811/
 - ssp-iam-v2-201811/
+#(baseline: 1850-1900?)
 
 https://ipcc-browser.ipcc-data.org/browser/dataset/3737/0:
 - tas_global_Historical.csv
