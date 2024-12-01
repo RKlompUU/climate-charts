@@ -17,17 +17,19 @@ def parse_measurements():
     print(df.index)
     print(df)
     # offset to change from 1951-1980 baseline to 1850-1900
-    df += 0.3
+    df += 0.35 # somewhere between 0.3 and 0.4?
     return df
 
 def parse_projections():
     f = f'{data_dir}/projections/ssp-iam-v2-201811/data.csv'
     df = pd.read_csv(f)
 
-    df = df[df['VARIABLE'] == 'Diagnostics|MAGICC6|Temperature|Global Mean']\
-        [df['SCENARIO'] == 'SSP1-19']\
-        .set_index(['MODEL'])\
-        .drop(columns=['REGION', 'VARIABLE', 'UNIT', 'SCENARIO'])\
+    df = df[df['VARIABLE'] == 'Diagnostics|MAGICC6|Temperature|Global Mean']
+    df['MODEL-SCENARIO'] = df['MODEL'] + df['SCENARIO']
+    print(df)
+    df = df\
+        .set_index(['MODEL-SCENARIO'])\
+        .drop(columns=['MODEL', 'SCENARIO', 'REGION', 'VARIABLE', 'UNIT'])\
         .T
     df = df.rename_axis('Year')
     df.index = df.index.astype('int64')
